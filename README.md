@@ -31,20 +31,31 @@ Hardware – PCs, Cyclone II , USB flasher
 5.	For different input combinations generate the timing diagram.
 
 
-**Program:**
+Program:
+```
+F(A,B,C,D)=AB+CD+AD
 
-/* Program to implement the given logic function and to verify its operations in quartus using Verilog programming. 
+module boolean_function_4var (
+    input  wire A,
+    input  wire B,
+    input  wire C,
+    input  wire D,
+    output wire F
+);
 
-Developed by: RegisterNumber:*/
+assign F = (~A & B) | (C & D) | (A & ~D);
+
+endmodule
+```
+Rtl:
+<img width="1269" height="849" alt="image" src="https://github.com/user-attachments/assets/27981fe5-3d60-41f5-8dd1-834e67cc0c8f" />
 
 
-**RTL realization**
 
-**Output:**
+**OUTPUT**
+<img width="1640" height="589" alt="image" src="https://github.com/user-attachments/assets/91031310-4ff5-4344-8be0-aed06c84ca83" />
 
-**RTL**
 
-**Timing Diagram**
 
 **Result:**
 
